@@ -17,6 +17,7 @@ router.post('/register', (req, res) => {
           res.status(201).json({ Success: `${user.username} has been successfully created.`})
       })
       .catch(err => {
+          console.log(err);
           res.status(500).json({ Error: 'the flood invaded during the add.', err })
       })
 });
